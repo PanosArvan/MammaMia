@@ -10,6 +10,10 @@ body {
     background: url(Spaghetti.webp) no-repeat;
     background-size: cover;
     background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -21,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 999;
 }
 
 .logo {
@@ -76,4 +80,22 @@ body {
     background: rgba(100, 0, 0, .1);
     backdrop-filter: blur(50px);
     z-index: -1;
+}
+
+p {
+    max-width: fit-content;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: xx-large;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    max-width: fit-content;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
