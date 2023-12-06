@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamma Mia Restaurant - Booking</title>
+    <title>Mamma Mia Restaurant - About Us</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
 </head>
 
 <body>
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
 
     <header>
         <h1>Mamma Mia Restaurant</h1>
@@ -27,11 +31,59 @@
         <p>Make a reservation to secure your spot at Mamma Mia. Whether it's a romantic dinner for two or a celebration
             with friends and family, we are here to make your dining experience special.</p>
         <p>Fill out the form below to reserve your table. We look forward to hosting you!</p>
-        <!-- Add your booking form or details here -->
+
+        <form action="submit_booking.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="party-size">Party Size:</label>
+            <input type="number" id="party-size" name="party_size" min="1" required>
+
+            <input type="submit" value="Submit Reservation">
+        </form>
     </section>
 
+    <script type="text/javascript">
+        let progress = document.getElementById("progressBar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+        function updateProgressBar() {
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+        updateProgressBar();
+        window.onresize = updateProgressBar;
+        window.onscroll = updateProgressBar;
+    </script>
+
     <footer>
-        <p>&copy; 2023 Mamma Mia Restaurant. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="validator-icons">
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                    <img class="validator-icon" src="http://www.w3.org/Icons/valid-css" alt="Valid CSS" />
+                </a>
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                    <img class="validator-icon"
+                        src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165"
+                        height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                        title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                </a>
+            </div>
+            <p class="restaurant-name">Mamma Mia Restaurant</p>
+        </div>
     </footer>
 
 </body>

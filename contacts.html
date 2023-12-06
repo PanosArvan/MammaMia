@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamma Mia Restaurant - Contacts</title>
+    <title>Mamma Mia Restaurant - About Us</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
 </head>
 
 <body>
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
 
     <header>
         <h1>Mamma Mia Restaurant</h1>
@@ -23,38 +27,65 @@
     </nav>
 
     <section id="contacts">
-        <h2>Contact Us</h2>
-        <p>Have questions or feedback? <br>Reach out to us using the contact information below or fill out the contact
-            form.
-            <br> We value your input and are here to assist you.
-        </p>
-        <br>
-        <div class="contact-info">
-            <p><strong>Address:</strong> Diokatu 10 A, Helsinki 00100</p>
-            <p><strong>Email:</strong> info@mammamia.com</p>
-            <p><strong>Phone:</strong> +358 400 203 045</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? Reach out to us using the contact information below or fill out the
+                    contact form. We value your input and are here to assist you.</p>
+
+                <ul class="list-unstyled">
+                    <li><strong>Address:</strong> Diokatu 10 A, Helsinki 00100</li>
+                    <li><strong>Email:</strong> <a href="mailto:info@mammamia.com">info@mammamia.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+358400203045">+358 400 203 045</a></li>
+                </ul>
+            </div>
+
+            <form action="#" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-        <br>
-        <form action="#" method="post" class="contact-form">
-            <label for="name">Name:</label>
-            <br>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <br>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Message:</label>
-            <br>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <br>
-            <button type="submit">Send Message</button>
-        </form>
     </section>
 
+    <script type="text/javascript">
+        let progress = document.getElementById("progressBar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+        function updateProgressBar() {
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+        updateProgressBar();
+        window.onresize = updateProgressBar;
+        window.onscroll = updateProgressBar;
+    </script>
+
     <footer>
-        <p>&copy; 2023 Mamma Mia Restaurant. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="validator-icons">
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                    <img class="validator-icon" src="http://www.w3.org/Icons/valid-css" alt="Valid CSS" />
+                </a>
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                    <img class="validator-icon"
+                        src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165"
+                        height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                        title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                </a>
+            </div>
+            <p class="restaurant-name">Mamma Mia Restaurant</p>
+        </div>
     </footer>
+
 
 </body>
 
