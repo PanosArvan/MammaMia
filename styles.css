@@ -127,7 +127,6 @@ section {
         max-width: 100%;
         height: 150px;
     }
-
 }
 
 /* For smartphones and smaller screens */
@@ -175,35 +174,44 @@ section {
 form {
     display: grid;
     gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 
 section#booking {
-    max-width: 90%;
-    margin: 2em auto;
-    padding: 1em;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 80px;
-    padding-right: 2cqmin;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    color: #333333;
 }
 
 label {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     padding: 0.5em;
-    border: 1px solid #ccc;
+    margin-bottom: 0.5em;
+    border: 1px solid #cccccc;
     border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
 }
 
 input[type="submit"] {
     background-color: #333333;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
 }
 
 input[type="submit"]:hover {
@@ -337,14 +345,14 @@ footer {
 
 .validator-icons {
     display: flex;
-    /* Display icons in a row */
+
 }
 
 .validator-icon {
     height: 31px;
     width: 31px;
     margin-right: 5px;
-    /* Adjust margin as needed */
+
 }
 
 .validator-icon:hover {
@@ -353,8 +361,44 @@ footer {
 
 .restaurant-name {
     font-size: 14px;
-    /* Adjust font size as needed */
     margin: 0;
     flex-grow: 1;
-    /* Allow the restaurant name to take up available space and be centered */
+}
+
+.wavy {
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(to right, #dc143c, #1e7e34);
+    -webkit-background-clip: text;
+    font-size: 5vw;
+    animation: animated 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animated {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+
 }
