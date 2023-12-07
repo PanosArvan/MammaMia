@@ -19,79 +19,85 @@
     </header>
 
     <div class="burger-menu">
-            
+
+    </div>
+    <div class="nav-links">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="booking.html">Booking</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <section id="home">
+            <h2>Welcome to Mamma Mia Restaurant</h2>
+            <p>Indulge in the finest Italian cuisine and savor the flavors of our carefully crafted dishes. Our
+                restaurant
+                offers a cozy atmosphere and a delightful dining experience.</p>
+            <p>Explore our menu, make a reservation, and join us for an unforgettable culinary journey!</p>
+        </section>
+
+        <div class="wavy">
+            <span style="--i:1;">O</span>
+            <span style="--i:2;">h</span>
+            <span style="--i:3;">M</span>
+            <span style="--i:4;">a</span>
+            <span style="--i:5;">m</span>
+            <span style="--i:6;">m</span>
+            <span style="--i:7;">a</span>
+            <span style="--i:8;">M</span>
+            <span style="--i:9;">i</span>
+            <span style="--i:10;">a</span>
+            <span style="--i:11;">F</span>
+            <span style="--i:12;">i</span>
+            <span style="--i:13;">g</span>
+            <span style="--i:14;">g</span>
+            <span style="--i:15;">a</span>
+            <span style="--i:16;">r</span>
+            <span style="--i:17;">o</span>
+            <span style="--i:18;">!</span>
         </div>
-        <div class="nav-links">
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="booking.html">Booking</a>
-                <a href="contacts.html">Contacts</a>
-                <a href="about.html">About</a>
-            </nav>
+        <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
+            <iframe src="https://giphy.com/embed/bgT142FWjRwV4hWsvX" width="15%" height="15%"
+                style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <p><a href="https://giphy.com/gifs/art-loop-hand-bgT142FWjRwV4hWsvX">via GIPHY</a></p>
 
-            <section id="home">
-                <h2>Welcome to Mamma Mia Restaurant</h2>
-                <p>Indulge in the finest Italian cuisine and savor the flavors of our carefully crafted dishes. Our
-                    restaurant
-                    offers a cozy atmosphere and a delightful dining experience.</p>
-                <p>Explore our menu, make a reservation, and join us for an unforgettable culinary journey!</p>
-            </section>
+        <script type="text/javascript">
+            let progress = document.getElementById("progressBar");
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
 
-            <div class="wavy">
-                <span style="--i:1;">O</span>
-                <span style="--i:2;">h</span>
-                <span style="--i:3;">M</span>
-                <span style="--i:4;">a</span>
-                <span style="--i:5;">m</span>
-                <span style="--i:6;">m</span>
-                <span style="--i:7;">a</span>
-                <span style="--i:8;">M</span>
-                <span style="--i:9;">i</span>
-                <span style="--i:10;">a</span>
-                <span style="--i:11;">F</span>
-                <span style="--i:12;">i</span>
-                <span style="--i:13;">g</span>
-                <span style="--i:14;">g</span>
-                <span style="--i:15;">a</span>
-                <span style="--i:16;">r</span>
-                <span style="--i:17;">o</span>
-                <span style="--i:18;">!</span>
-            </div>
-
-            <script type="text/javascript">
-                let progress = document.getElementById("progressBar");
+            function updateProgressBar() {
                 let totalHeight = document.body.scrollHeight - window.innerHeight;
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
+            }
+            updateProgressBar();
+            window.onresize = updateProgressBar;
+            window.onscroll = updateProgressBar;
+        </script>
 
-                function updateProgressBar() {
-                    let totalHeight = document.body.scrollHeight - window.innerHeight;
-                    let progressHeight = (window.pageYOffset / totalHeight) * 100;
-                    progress.style.height = progressHeight + "%";
-                }
-                updateProgressBar();
-                window.onresize = updateProgressBar;
-                window.onscroll = updateProgressBar;
-            </script>
-
-            <footer>
-                <div class="footer-content">
-                    <div class="validator-icons">
-                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
-                            <img class="validator-icon" src="http://www.w3.org/Icons/valid-css" alt="Valid CSS" />
-                        </a>
-                        <a href="https://validator.w3.org/check?uri=referer" target="_blank">
-                            <img class="validator-icon"
-                                src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165"
-                                height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
-                                title="HTML5 Powered with CSS3 / Styling, and Semantics">
-                        </a>
-                    </div>
-                    <p class="restaurant-name">Mamma Mia Restaurant</p>
+        <footer>
+            <div class="footer-content">
+                <div class="validator-icons">
+                    <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                        <img class="validator-icon" src="http://www.w3.org/Icons/valid-css" alt="Valid CSS" />
+                    </a>
+                    <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                        <img class="validator-icon"
+                            src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165"
+                            height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                            title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                    </a>
                 </div>
-            </footer>
+                <p class="restaurant-name">Mamma Mia Restaurant</p>
+            </div>
+        </footer>
 
-        </div>
+    </div>
     </div>
 
 </body>
